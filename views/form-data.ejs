@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data</title>
+</head>
+<body>
+    <h1>User Details</h1>
+    <p><strong>Name:</strong> <%= name %></p>
+    <p><strong>Email:</strong> <%= email %></p>
+
+    <h2>All Submitted Data:</h2>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <% for (let [key, value] of Object.entries(allData)) { %>
+            <tr>
+                <td><%= key %></td>
+                <td>:</td>
+                <td><%= value %></td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<% title = 'Home' %>
+
+<h1>Welcome <%= email %></h1>
+
+<% if (role === 'admin') { %>
+  <a href="/concert/create_Concert">Create Concert</a><br>
+<% } %>
+
+<a href="/concert/retrieve_concert">Show All Concerts</a><br>
+
+<a href="/logout">Logout</a>

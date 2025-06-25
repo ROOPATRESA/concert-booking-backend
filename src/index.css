@@ -1,0 +1,13 @@
+body {
+  background: radial-gradient(circle at center, #fff176 0%, #fdd835 40%, #000000 100%);
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

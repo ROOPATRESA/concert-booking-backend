@@ -1,111 +1,123 @@
-<style>
-  body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #74ebd5, #acb6e5);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-  }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #74ebd5, #acb6e5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
 
-  .login-container {
-      background: white;
-      padding: 40px 35px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      width: 400px;
-      transition: 0.3s;
-  }
+      .login-container {
+        background: white;
+        padding: 40px 35px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        transition: 0.3s;
+      }
 
-  .login-container:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  }
+      .login-container:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
 
-  h1 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 25px;
-  }
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 25px;
+      }
 
-  label {
-      display: block;
-      margin: 15px 0 5px;
-      color: #555;
-      font-weight: 600;
-  }
+      label {
+        display: block;
+        margin: 15px 0 5px;
+        color: #555;
+        font-weight: 600;
+      }
 
-  input[type="text"], input[type="password"] {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      outline: none;
-      transition: 0.3s;
-      font-size: 14px;
-  }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+        transition: 0.3s;
+        font-size: 14px;
+      }
 
-  input[type="text"]:focus, input[type="password"]:focus {
-      border-color: #74ebd5;
-      box-shadow: 0 0 5px #74ebd5;
-  }
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        border-color: #74ebd5;
+        box-shadow: 0 0 5px #74ebd5;
+      }
 
-  input[type="submit"] {
-      width: 100%;
-      background: #74ebd5;
-      color: #fff;
-      padding: 14px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: 0.3s;
-      font-size: 16px;
-  }
+      input[type="submit"] {
+        width: 100%;
+        background: #74ebd5;
+        color: #fff;
+        padding: 14px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: 0.3s;
+        font-size: 16px;
+      }
 
-  input[type="submit"]:hover {
-      background: #67d8cc;
-  }
+      input[type="submit"]:hover {
+        background: #67d8cc;
+      }
 
-  .signup-link {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 14px;
-  }
+      .signup-link {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+      }
 
-  .signup-link a {
-      color: #74ebd5;
-      text-decoration: none;
-      font-weight: 600;
-  }
+      .signup-link a {
+        color: #74ebd5;
+        text-decoration: none;
+        font-weight: 600;
+      }
 
-  .signup-link a:hover {
-      text-decoration: underline;
-  }
+      .signup-link a:hover {
+        text-decoration: underline;
+      }
 
-  .message {
-      color: red;
-      margin-top: 15px;
-      text-align: center;
-  }
-</style>
+      .message {
+        color: red;
+        margin-top: 15px;
+        text-align: center;
+      }
+    </style>
 
-<div class="login-container">
-  <h1>Login</h1>
-  <form action="/login" method="post">
-      <label>Email</label>
-      <input type="text" name="email" required>
-      <label>Password</label>
-      <input type="password" name="password" required>
-      <input type="submit" value="Login">
-  </form>
+    <div class="login-container">
+      <h1>Login</h1>
+      <form action="/login" method="post">
+        <label>Email</label>
+        <input type="text" name="email" required />
+        <label>Password</label>
+        <input type="password" name="password" required />
+        <input type="submit" value="Login" />
+      </form>
 
-  <% if (message) { %>
+      <% if (message) { %>
       <div class="message"><%= message %></div>
-  <% } %>
+      <% } %>
 
-  <div class="signup-link">
-      <p>Don't have an account? <a href="/signup">Sign up here</a></p>
-  </div>
-</div>
+      <div class="signup-link">
+        <p>Don't have an account? <a href="/signup">Sign up here</a></p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -48,12 +48,11 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 // 🔹 Use Routers
+app.use("/api", apiRouter);
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/concert", concertRouter);
 app.use("/booking", bookingRouter);
-app.use("/api", apiRouter);
-
 // 🔹 Serve Static Files
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/uploads", express.static(path.join(__dirname, "public/uploads")));

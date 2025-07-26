@@ -28,7 +28,8 @@ require('./database/db');
 
 app.use(
   cors({
-    origin: "https://concert-frontend-nine.vercel.app",
+    origin:[ "https://concert-frontend-nine.vercel.app",
+    "concert-frontend-roopa-tresas-projects.vercel.app"],
     credentials: true,
   })
 );

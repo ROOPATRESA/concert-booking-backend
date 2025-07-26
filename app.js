@@ -24,12 +24,16 @@ const db = require("./database/db"); // Ensure DB connection is established
 var app = express();
 require('./database/db');
 
+
+
 app.use(
   cors({
-    origin: "http://localhost:5000", // <-- your frontend origin, adjust if different
-    credentials: true, // <-- enable cookies and credentials
+    origin: ["http://localhost:5000", "https://concert-frontend-nine.vercel.app"],
+    credentials: true,
   })
 );
+
+
 app.use("/tickets", express.static(path.join(__dirname, "tickets")));
 
 // 🔹 Middleware Setup

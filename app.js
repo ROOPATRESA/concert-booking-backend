@@ -28,7 +28,7 @@ require('./database/db');
 
 app.use(
   cors({
-    origin: ["http://localhost:5000", "https://concert-frontend-nine.vercel.app"],
+    origin: "https://concert-frontend-nine.vercel.app",
     credentials: true,
   })
 );

@@ -9,6 +9,9 @@ const session = require("express-session");
 const bcrypt = require("bcrypt");
 var cors = require("cors");
 
+
+
+
 // Import Routers
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
@@ -19,6 +22,7 @@ var apiRouter = require("./routes/api");
 const db = require("./database/db"); // Ensure DB connection is established
 
 var app = express();
+require('./database/db');
 
 app.use(
   cors({
